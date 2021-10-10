@@ -1,0 +1,34 @@
+{
+    "name": "phiko/ninjatt",
+    "type": "project",
+    "description": "Ninjatt-A secret place where real Ninjas meet!",
+    "keywords": [
+        "php",
+        "game",
+        "reactphp"
+    ],
+    "homepage": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philipp Koch",
+            "email": "phil.koch@gmx.ch"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "cboden/ratchet": "^0.3.6",
+        "gabrielbull/websocket-client": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Smasher\\": "src/"
+        }
+    }
+}

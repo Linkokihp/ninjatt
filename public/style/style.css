@@ -1,0 +1,216 @@
+:root {
+    --pixel-size: 2px;
+    --grid-cell: calc( var(--pixel-size) * 16);
+    --bg: #292929;
+    --Speech-Bubble-Border:#222;
+    --Speech-Bubble-Background:#fcfcfc;
+    --Speech-Bubble-Text:#000;
+    --animate-delay: 0.5s;
+    
+ }
+
+
+ /* RESET */
+ html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ @font-face {
+   font-family:"silkscreen"; 
+   src: url('https://dl.dropbox.com/s/l0frac4d7bz3zx6/silkscreen.ttf');
+}
+
+ @font-face {
+   font-family: 'pp2';
+    src: url('PressStart2P-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ @media( min-width: 700px ) {
+    :root {
+       --pixel-size: 3px;
+    }
+ }
+ @media( min-width: 1000px ) {
+    :root {
+       --pixel-size: 4px;
+    }
+ }
+ 
+ html, body {
+    height: 100%;
+ }
+ 
+ body {
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+ }
+
+ .gamePage {
+   background: no-repeat center url("../images/background-game.jpg");
+   background-size: cover;
+ }
+
+ header {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100px;
+ }
+
+ main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    width: 100%;
+    position: relative;
+ }
+ 
+ .pixel-art {
+    image-rendering: pixelated;
+ }
+
+ .welcome_msg {
+    color: white;
+ }
+
+ #mute {
+   position: absolute;
+   font-size: 30px;
+   left: 40px;
+   border: none;
+   background-color: transparent;
+ }
+
+ .mute {
+    font-size: 30px;
+ }
+
+ .logout {
+   position: absolute;
+   font-size: 30px;
+   right: 40px;
+ }
+
+ .onlineStateList {
+   color: white;
+   width: 300px;
+ }
+
+ .onlineStateList ul {
+   list-style-type: none;
+ }
+
+ .ninjaFit {
+   color: white;
+   width: 300px;
+ }
+
+ .ninjaFit form{
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ #game-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 1000px;
+   height: 800px;
+ }
+
+ #game {
+    margin-bottom: 10px;
+    font-family: "pp2";
+ }
+
+ .sendBtn {
+    width: 250px;
+    height: 30px;
+    justify-self: center;
+ }
+
+ /* WELCOMESCREEN */
+ .index {
+   background: no-repeat center url("../images/background-index.png");
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .formDiv {
+    display: flex;
+    justify-content: center;
+    height: 280px;
+    width: 400px;
+ }
+
+ #loginForm {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+ }
+
+
+/* SIGN-UP */
+.signUp {
+   background: no-repeat center url("../images/background-signup.jpg");
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#form2 {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+ }
