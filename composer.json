@@ -1,5 +1,5 @@
 {
-    "name": "phiko/ninjatt",
+    "name": "linkokihp/ninjatt",
     "type": "project",
     "description": "Ninjatt-A secret place where real Ninjas meet!",
     "keywords": [
@@ -7,7 +7,7 @@
         "game",
         "reactphp"
     ],
-    "homepage": "",
+    "homepage": "https://github.com/Linkokihp/ninjatt",
     "license": "MIT",
     "authors": [
         {
