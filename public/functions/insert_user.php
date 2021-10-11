@@ -8,6 +8,6 @@
         $user->setUserPassword(sha1($_POST['UserPassword']));
         $user->insertUser();
 
-        header("Location:index.php?success=1");
+        header("Location:../../index.php?success=1");
     }
 ?>

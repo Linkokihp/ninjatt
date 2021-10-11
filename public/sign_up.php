@@ -19,7 +19,7 @@
                     <td><input type="password" name="UserPassword" placeholder="Enter your Password" required></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="SignUp"></td>
+                    <td><button class="signUpBtn" type="submit" value="SignUp">Sign Up</button></td>
                 </tr>
                 <?php
                     if(isset($_GET['success'])) {

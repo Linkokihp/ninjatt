@@ -12,7 +12,10 @@
         session_destroy();
     }
 ?>
-<body class="index rpgui-content">
+<body class="index rpgui-content animate__animated animate__fadeIn">
+
+    <div class="titel">Phil's Ninjatt</div>
+
     <div class="formDiv rpgui-container framed-grey animate__animated animate__fadeInDown">
         <form autocomplete="off" id="loginForm" method="post" action="public/functions/user_login.php">
             <h2>Login for Ninjatt</h2>
@@ -24,7 +27,7 @@
                     <td><input type="password" name="UserPasswordLogin" placeholder="Enter your Userpassword" required></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="Login"></td>
+                    <td><button class="loginBtn" type="submit" value="Login">Log In</button></td>
                 </tr>
                 <?php
                     if(isset($_GET['error'])) {

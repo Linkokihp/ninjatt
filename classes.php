@@ -144,7 +144,7 @@
             ));
 
             if($req->rowCount()==0) {
-                header("Location:index.php?error=1");
+                header("Location:../../index.php?error=1");
                 return false;
             } else {
                 while($data=$req->fetch()){
@@ -173,100 +173,8 @@
             include "config.php";
 
             $val = trim($value); // remove empty space sorrounding string
-            $val = mysqli_real_escape_string($conn, $value);
+            $val = mysqli_real_escape_string($bdd, $value);
 
             return $val;
         }
     }
-
-
-    class chat{
-        private $ChatId, $ChatUserId, $ChatText;
-
-        //GET/SET ChatId
-        public function getChatId(){
-            return $this->ChatId;
-        }
-        public function setChatId($ChatId){
-            $this->ChatId = $ChatId;
-        }
-
-        //GET/SET ChatUserId
-        public function getChatUserId(){
-            return $this->ChatUserId;
-        }
-        public function setChatUserId($ChatUserId){
-            $this->ChatUserId = $ChatUserId;
-        }
-
-        //GET/SET ChatText
-        public function getChatText(){
-            return $this->ChatText;
-        }
-        public function setChatText($ChatText){
-            $this->ChatText = $ChatText;
-        }
-
-        //Insert ChatMessage
-        public function insertChatMessage(){
-            include 'config.php';
-            $req=$bdd->prepare("INSERT INTO chat(ChatUserId, ChatText) VALUES (:ChatUserId, :ChatText)");
-
-            //Execute Data
-            $req->execute(array(
-                'ChatUserId'=>$this->getChatUserId(),
-                'ChatText'=>$this->getChatText()
-            ));
-        }
-        
-        //Display ChatMessage
-        public function displayChatMessage(){
-            include 'config.php';
-            $ChatReq=$bdd->prepare("SELECT * FROM chat WHERE ChatUserId=:ChatUserId");
-            $ChatReq->execute(array(
-                'ChatUserId' =>$this->getChatUserId()
-            ));
-
-            while($DataChat = $ChatReq->fetch()){
-                $UserReq=$bdd->prepare("SELECT * FROM users WHERE UserId=:UserId");
-                //Execute Data
-                $UserReq->execute(array(
-                    'UserId' => $DataChat['ChatUserId']
-                ));
-                $DataUser = $UserReq->fetch();
-
-                    ?>
-                    <!-- start speech bubble -->
-                    <div id="speech-bubble">
-                        <div id="bub-part-a"></div>
-                        <div id="speech-txt" class="chatMessages userMessages"><?php echo htmlspecialchars($DataChat['ChatText']);?></div>
-                        <div id="bub-part-a"></div>
-
-                        <div id="speech-arrow">
-                            <div id="arrow-w"></div>
-                            <div id="arrow-x"></div>
-                            <div id="arrow-y"></div>
-                            <div id="arrow-z"></div>
-                        </div>
-                    </div>
-                    <!--end speech bubble-->
-                <?php
-
-            }
-        }
-
-        //Delete ChatMessage
-        public function deleteChatMessage(){
-            include 'config.php';
-            $req=$bdd->prepare("DELETE FROM chat WHERE ChatUserId=ChatUserId");
-
-            //Execute Data
-            $req->execute(array(
-                'ChatUserId'=>$this->getChatUserId(),
-            ));
-        }
-    }
-
-
-
-?>

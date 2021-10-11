@@ -525,4 +525,18 @@ $(function(){
 			$('#message').val($('#message').val()+' ')
 		}
 	}, false);
+
+
+	// Backgroundmusic Control
+	$("#backgroundMusic").prop("volume", 0.1);
+
+	$('#mute').click(function() {
+		$('.mute').toggleClass('fa-volume-up fa-volume-mute')
+		
+		if( $("audio").prop('muted') ) {
+			$("audio").prop('muted', false);
+		} else {
+			$("audio").prop('muted', true);
+		}
+	});
 });
