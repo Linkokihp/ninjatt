@@ -4,18 +4,28 @@ Ninjatt is a simple Chatapp where real Ninjas can meet eachother :octocat:
 
 ## Technologies
 
-*Frontend
-    *HTML
-    *CSS
-    *Javascript
-    *JQuery
+Frontend
 
-*Backend
-    *MySQL
-    *PHP
-    *AJAX
-    *[ReactPHP][1]
-    *[Ratchet][2]
+    -HTML
+
+    -CSS
+
+    -Javascript
+
+    -JQuery
+
+
+Backend
+
+    -MySQL
+
+    -PHP
+
+    -AJAX
+
+    -[ReactPHP][1]
+
+    -[Ratchet][2]
 
 [1]: https://reactphp.org/ "ReactPHP"
 [2]: http://socketo.me/ "Ratchet Websocket"
@@ -48,10 +58,14 @@ php server.php
 
 -Now we're good to go! Open your browser and go to "localhost/ninjatt/index.php"
 
-*Login with one of the following users:
-    *Usermail: akali@ionia.com, password: 1234
-    *Usermail: martinja@ninjatt.com, password: 1234 :trollface:
-    *Usermail: shrouded@moon.com, password: 1234
+Login with one of the following users:
+
+-Usermail: akali@ionia.com, password: 1234
+
+-Usermail: martinja@ninjatt.com, password: 1234 :trollface:
+
+-Usermail: shrouded@moon.com, password: 1234
+
 
 -User Arrowkeys to navigate on the canvas
 
