@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 10. Okt 2021 um 11:33
--- Server-Version: 10.4.20-MariaDB
--- PHP-Version: 7.4.22
+-- Erstellungszeit: 12. Okt 2021 um 21:08
+-- Server-Version: 10.4.21-MariaDB
+-- PHP-Version: 7.4.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,9 +43,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`UserId`, `UserName`, `UserMail`, `UserPassword`, `UserNinja`, `OnlineState`, `X`, `Y`) VALUES
-(12, 'admin', 'admin@ninjatt.ch', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'default', 1, 0, 0),
-(13, 'admin2', 'admin2@ninjatt.ch', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'default', 0, 0, 0),
-(14, 'admin3', 'admin3@ninjatt.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'default', 0, 0, 0);
+(15, 'Akali', 'akali@ionia.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'default', 0, 0, 0),
+(16, 'Martinja', 'martinja@ninjatt.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'default', 0, 0, 0),
+(17, 'Usagi Yojimbo', 'shrouded@moon.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'default', 0, 0, 0);
 
 --
 -- Indizes der exportierten Tabellen
@@ -65,7 +65,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `UserId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
