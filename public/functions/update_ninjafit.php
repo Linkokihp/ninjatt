@@ -1,4 +1,5 @@
 <?php
+    //Updates the NinjaOutfit of the user NOT WORKING YET
     session_start();
     include '../../classes.php';
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Smasher\Game;
+namespace Ninjatt\Game;
 
 use Ratchet\ConnectionInterface;
 use Ratchet\Wamp\WampServerInterface;

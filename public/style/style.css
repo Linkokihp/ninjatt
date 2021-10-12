@@ -1,15 +1,3 @@
-:root {
-    --pixel-size: 2px;
-    --grid-cell: calc( var(--pixel-size) * 16);
-    --bg: #292929;
-    --Speech-Bubble-Border:#222;
-    --Speech-Bubble-Background:#fcfcfc;
-    --Speech-Bubble-Text:#000;
-    --animate-delay: 0.5s;
-    
- }
-
-
  /* RESET */
  html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -53,6 +41,17 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+:root {
+   --pixel-size: 2px;
+   --grid-cell: calc( var(--pixel-size) * 16);
+   --bg: #292929;
+   --Speech-Bubble-Border:#222;
+   --Speech-Bubble-Background:#fcfcfc;
+   --Speech-Bubble-Text:#000;
+   --animate-delay: 0.5s;
+   
 }
 
  @font-face {
@@ -114,7 +113,9 @@ table {
  }
  
  .pixel-art {
-    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
  }
 
  .welcome_msg {
@@ -197,6 +198,11 @@ table {
     background-position: 0 0;
     animation: back 20s linear infinite;
     -webkit-animation: back 20s linear infinite;
+}
+@-webkit-keyframes back{
+   100%{
+      background-position: 2000px 0;
+   }
 }
 @keyframes back{
    100%{

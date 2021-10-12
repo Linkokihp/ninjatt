@@ -1,7 +1,7 @@
 <?php
 
     class user{
-        private $UserId, $UserName, $UserMail, $UserPassword, $UserNinja, $OnlineState, $X, $Y;
+        private $UserId, $UserName, $UserMail, $UserPassword, $UserNinja, $OnlineState;
 
         //GET/SET UserId
         public function getUserId() {
@@ -51,22 +51,6 @@
             $this->OnlineState=$OnlineState;
         }
 
-        //GET/SET X-Position
-        public function getXPosition() {
-            return $this->X;
-        }
-        public function setXPosition($X) {
-            $this->X=$X;
-        }
-
-        //GET/SET Y-Position
-        public function getYPosition() {
-            return $this->Y;
-        }
-        public function setYPosition($Y) {
-            $this->Y=$Y;
-        }
-
         //Display OnlineUsers
         public function displayOnlineUsers(){
             include 'config.php';
@@ -81,28 +65,7 @@
                 }
             }
 
-        //Display Character
-        public function displayCharacter(){
-            include 'config.php';
-            $Charreq=$bdd->prepare("SELECT * FROM users WHERE UserName=:UserName");
-            $Charreq->execute(array(
-                'UserName'=>$this->getUserName()
-            ));
-
-            while($Result = $Charreq->fetch()) {
-                if($Result['OnlineState'] == 1) {
-                    ?>
-                    <div class="username"><?php echo $Result['UserName'];?></span></div>
-                    <div class="shadow pixel-art"></div>
-                    <div style='background-image: url("src/chars/ninja-<?php echo $Result['UserNinja'];?>.png");' class="character_spritesheet pixel-art"></div>
-                    <div class="chatMessages"></div>
-                    <?php  
-                }
-            }
-        }
-
-
-        //Update Ninjafit
+        //Update Ninjafit NOT WORKING YET
         public function updateNinjafit() {
             include "config.php";
             $req =$bdd->prepare("UPDATE users SET UserNinja=:UserNinja WHERE UserName=:UserName");

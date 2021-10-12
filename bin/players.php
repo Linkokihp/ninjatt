@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use WebSocketClient\WebSocketClient;
-use Smasher\Game\FakePlayer;
+use Ninjatt\Game\FakePlayer;
 
 $playersLimit = isset($argv[1]) ? (int) $argv[1] : 100;
 /** @var FakePlayer[] $players */

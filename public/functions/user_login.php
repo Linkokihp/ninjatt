@@ -1,4 +1,5 @@
 <?php
+    //Function to get Usercredentials from db and log in user
     session_start();
     include "../../classes.php";
 

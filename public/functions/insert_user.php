@@ -1,4 +1,5 @@
 <?php
+    //Function to insert user into db
     include "../../classes.php";
     $user = new user();
 

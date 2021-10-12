@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Smasher\Game;
+namespace Ninjatt\Game;
 
 use WebSocketClient\WebSocketClient;
 use WebSocketClient\WebSocketClientInterface;
@@ -19,7 +19,6 @@ class FakePlayer implements WebSocketClientInterface
 
     private $ready = false;
 
-    private $monster;
 
     public function onWelcome(array $data)
     {
@@ -35,8 +34,6 @@ class FakePlayer implements WebSocketClientInterface
     public function move()
     {
         if ($this->ready) {
-            $this->x -= ($this->x - $this->monster['x']) > 0 ? 3 : -3;
-            $this->y -= ($this->y - $this->monster['y']) > 0 ? 3 : -3;
 
             $this->publish('char_move', [
                 'id' => $this->id,
@@ -44,13 +41,6 @@ class FakePlayer implements WebSocketClientInterface
                 'y' => $this->y,
                 'ninjaType' => 'ninja'
             ]);
-        }
-    }
-
-    public function onEvent($topic, $message)
-    {
-        if($topic === 'monster_add') {
-            $this->monster = $message;
         }
     }
 

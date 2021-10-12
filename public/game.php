@@ -7,7 +7,7 @@
 		<link href="style/dist/rpgui.css" rel="stylesheet" type="text/css" >
 	</head>
 <?php
-	$session_laufzeit = 500*60;  //5*60 5 Minutes
+	$session_laufzeit = 10*60;
 	$localtime = time();
 	include "../classes.php";
 
@@ -49,7 +49,7 @@
 			</div>
 		</div>
 		
-		<!-- NinjaOutfit -->
+		<!-- NinjaOutfit NOT WORKING YET-->
 		<div class="ninjaFit rpgui-container framed-grey animate__animated animate__fadeInRight">
 			<p>Select your Ninjatt-Outfit</p>
 			<form id="ninjaFit" method="POST">
