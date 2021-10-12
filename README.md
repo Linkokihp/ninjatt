@@ -4,13 +4,13 @@ Ninjatt is a simple Chatapp where real Ninjas can meet eachother :octocat:
 
 ## Technologies
 
-Frontend:
+**Frontend**
 -HTML
 -CSS
 -Javascript
 -JQuery
 
-Backend:
+**Backend**
 -MySQL
 -PHP
 -AJAX
@@ -48,9 +48,10 @@ php server.php
 -Now we're good to go! Open your browser and go to "localhost/ninjatt/index.php"
 
 **Login with one of the following users:**
--Usermail: akali@ionia.com, password: 1234
--Usermail: martinja@ninjatt.com, password: 1234 :trollface:
--Usermail: shrouded@moon.com, password: 1234
+
+Usermail: akali@ionia.com, password: 1234
+Usermail: martinja@ninjatt.com, password: 1234 :trollface:
+Usermail: shrouded@moon.com, password: 1234
 
 -User Arrowkeys to navigate on the canvas
 
