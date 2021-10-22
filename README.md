@@ -1,6 +1,7 @@
 # Ninjatt by Phil
 
 Ninjatt is a simple Chatapp where real Ninjas can meet eachother :octocat:
+!!ATM IT IS FOR DESKTOP USAGE ONLY!!
 
 ## Technologies
 
